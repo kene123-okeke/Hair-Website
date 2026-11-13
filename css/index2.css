@@ -1,0 +1,21 @@
+:root{
+        --background:#fffdf9;
+        --hover:#9ccbef;
+        --accent:#e9a7b6;
+        --primary:#1e56a0;
+        --heading:#14325c;
+        --error:#b4442f;
+        --body-text:#1b1f2a;
+        --cards:#f4f2ee;
+        --promo:#fceff3;
+        --tint:#eef6fc;
+        --text:#56606e;
+}
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+body{
+        background: var(--background);
+}
