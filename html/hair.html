@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            (function () {
+                try {
+                    const saved = localStorage.getItem('theme');
+                     const dark  = saved === 'dark' ||
+                      (!saved && matchMedia('(prefers-color-scheme: dark)').matches);
+                    if (dark) document.documentElement.setAttribute('data-theme', 'dark');
+                    } catch (e) {}
+                })();
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kin & Tee's Multi concept</title>
+        <link rel="stylesheet" href="../css/category.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <button type="button" onclick="menuToggle()" class="menu" id="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <h2><span>Kin & Tee's</span> Multi concept</h2>
+            <div class="nav-links" id="navlinks">
+                <a href="index.html">Home</a>
+                <a href="hair.html">Hair</a>
+                <a href="#">Cosmetics</a>
+                <a href="#">Accessories</a>
+                <a href="#">Articles</a>
+                <a href="#">Wishlist</a>
+                <input type="text" placeholder="Search...">
+                <button id="theme-toggle" aria-label="Toggle dark mode">&#9728;</button>
+    
+            </div>
+            <a href="#" class="cart">Cart</a>
+        </div>
+            
+        <div class="container">
+                <div class="header-links"><a href="index.html">Home</a> / <a href="hair.html">Hair</a>
+                </div>
+                
+                <h3 class="page-title">Hair</h3>
+                
+                <div class="categories">
+                    <button type="button" class="types active">All</button>
+                    <button type="button" class="types">Wigs</button>
+                    <button type="button" class="types">Hair Extensions </button>
+                    <button type="button" class="types">Weave-ons</button>
+                </div>
+                
+                <div class="filter">
+                    <button type="button">Filter</button>
+                    
+                    <div class="filter-keys">
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                        <button type="button"></button>
+                    </div>
+                </div>
+        </div>
+            
+        
+        <script src="../js/index.js"></script>
+    </body>
+
+</html>

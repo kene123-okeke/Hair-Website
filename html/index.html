@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        (function () {
+            try {
+                const saved = localStorage.getItem('theme');
+                 const dark  = saved === 'dark' ||
+                  (!saved && matchMedia('(prefers-color-scheme: dark)').matches);
+                if (dark) document.documentElement.setAttribute('data-theme', 'dark');
+                } catch (e) {}
+            })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kin & Tee's Multi concept</title>
     <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/index2.css">
 </head>
 <body>
     <div class="navbar">
-        <button type="button" class="menu" id="menu">
+        <button type="button" onclick="menuToggle()" class="menu" id="menu">
             <span></span>
             <span></span>
             <span></span>
         </button>
         
-        <h2>Kin & Tee's Multi concept</h2>
+        <h2><span>Kin & Tee's</span> Multi concept</h2>
         <div class="nav-links" id="navlinks">
-            <a href="#">Hair</a>
+            <a href="index.html">Home</a>
+            <a href="hair.html">Hair</a>
             <a href="#">Cosmetics</a>
             <a href="#">Accessories</a>
             <a href="#">Articles</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Blog</a>
+            <a href="#">Wishlist</a>
             <input type="text" placeholder="Search...">
+            <button id="theme-toggle" aria-label="Toggle dark mode">&#9728;</button>
+
         </div>
         <a href="#" class="cart">Cart</a>
 
@@ -32,15 +43,20 @@
     <div class="container">
 
         <div class="hero-section">
-            <div class="hero-text">
+            <div class"hero-text">
                 <p class="start-text">New Season</p>
                 <h2 class="text-title">Soft Color. Healthy Hair. Finished Looks.</h2>
                 <p class="text-content">Makeup, hair care and accessories chosen for every texture.</p>
 
-                <button type="button" class="shop-now">Shop Now</button>
+                <a href="hair.html"  class="shop-now">Shop Now</a>
                 <button type="button" class="shade">Find Your Shade</button>
             </div>
-            <div class="hero-image"></div>
+            <div class="hero-image">
+                <img src="../images/heropic1.avif" class="slide" alt="hero image" width="100%" height="100%">
+                 <img src="../images/heropic2.avif" class="slide" alt="hero image" width="100%" height="100%">
+                 <img src="../images/heropic3.avif" class="slide" alt="hero image" width="100%" height="100%">
+                 <img src="../images/heropic4.avif" class="slide" alt="hero image" width="100%" height="100%">
+            </div>
         </div>
 
         <div class="cards">
@@ -52,15 +68,79 @@
         <div class="best-items">
             <h2>Best Selling Items</h2>
             <div class="item-container">
-                <div class="items"></div>
-                <div class="items"></div>
-                <div class="items"></div>
-                <div class="items"></div>
+                <div class="items">
+                    <span class="images"></span>
+                    <span class="details">
+                        <h4>Hair Attachments</h4>
+                        <strong>Brand</strong>
+                    </span>
+                </div>
+                <div class="items">
+                    <span class="images"></span>
+                    <span class="details">
+                        <h4>Hair Shampoo </h4>
+                    </span>
+                </div>
+                <div class="items">
+                    <span class="images"></span>
+                    <span class="details">
+                        <h4>Wig Stands</h4>
+                    </span>
+                </div>
+                <div class="items">
+                    <span class="images"></span>
+                    <span class="details">
+                        <h4>Nail Polish</h4>
+                    </span>
+                </div>
             </div>
             
         </div>
+        <div class="promo">
+            <h3 class="promo-title">30% Off</h3>
+            <p class="promo-detail">promo details and stuff</p>
+            <button type="button">Check it out</button>
+            
+        </div>
     </div>
+    <footer>
+        <div class="mission-statement">
+            <h2> <span>Kin and Tee's</span> Multi Concept</h2>
+            <p>"We are dedicated to redefining beauty standards by providing a versatile, inclusive marketplace for hair, cosmetics, and accessories. Our mission is to celebrate individuality by offering a diverse collection of high-quality products, ensuring that everyone can find exactly what they need to showcase their authentic self."</p>
+        </div>
     
-    <script src="..../js/index.js"></script>
+        <div class="footer-links">
+            <div class="col">
+                <span>Categories</span>
+                <a href="#">Hair</a>
+                <a href="#">Hair Products</a>
+                <a href="#">Cosmetics</a>
+                <a href="#">Hair Articles</a>
+            </div>
+            <div class="col">
+                <span>Us</span>
+                <a href="#">About Us</a>
+                <a href="#">Contacts</a>
+                <a href="#">Become a Partner</a>
+            </div>
+            <div class="col">
+                <span>Customer Support</span>
+                <a href="#">Help center & FAQs</a>
+                <a href="#">Track Your Order</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of service</a>
+            </div>
+        </div>
+        <div class="copyright">
+        </div>
+        <div class="socials">
+            <a href="https://www.facebook.com/share/18fbbUwWSc/"><img src="../images/facebook.svg" alt="Facebook" width="35px" height="35px"></a>
+            <a href="https://wa.me/08037856431"><img src="../images/whatsapp.svg" alt="Whatsapp" width="35px"></a>
+            <a href="https://www.instagram.com/kinandteemulticoncept?exln=MTdscTMwaDhuYnM5eA=="><img src="../images/instagram.svg" alt="Instagram" width="35px" height="35px"></a>
+            <a href="https://x.com/AguluOkeke720"><img src="../images/X.svg" alt="X" width="35px" height="35px"></a>
+        </div>
+    </footer>
+    
+    <script src="../js/index.js"></script>
 </body>
-|
+</html>
