@@ -63,7 +63,7 @@ body{
 .navbar h2{
         text-align: center;
         white-space: nowrap;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-family:var(--head-font) ;
         font-weight: 700;
 }
