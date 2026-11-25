@@ -1,6 +1,8 @@
 function menuToggle() {
-    document.getElementById("navlinks").classList.toggle("open");
-};
+  document.getElementById("navlinks").classList.toggle("open");
+  document.getElementById("overlay").classList.toggle("panel");
+  
+}
 
 
 // 2. Dark/Light Theme Toggle with Safety Checks
@@ -28,4 +30,11 @@ if (toggleBtn) {
       toggleBtn.innerText = SUN;
     }
   });
+}
+
+// Filter open toggle 
+
+function filterOpenToggle() {
+  const filterToggle = document.querySelector(".filter-keys");
+  filterToggle.classList.toggle("openfilter");
 }

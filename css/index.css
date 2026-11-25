@@ -113,7 +113,7 @@ body{
         display: flex;
         flex-direction: column;
         position: fixed ;
-        top: 54px;
+        top: 51px;
         left: 0;
         background-color: var(--tint);
         height:100%;
@@ -151,15 +151,15 @@ body{
         
 }
 #theme-toggle{
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-family: var(--text-font);
         color: var(--primary);
         background-color: var(--cards);
         border: 1px solid var(--primary);
         padding: 5px;
-        height: 2.2rem;
-        line-height: 1;
-        width: 2.2rem;
+        height: 1.7rem;
+        line-height:1.5 ;
+        width: 1.7rem;
         display:flex;
         align-items:center;
         justify-content: center;
@@ -377,6 +377,7 @@ body{
         display: flex;
         flex-direction: column;
         margin: 20px 15px;
+        margin-bottom: 300px;
         padding: 15px 10px;
         background-color: var(--promo);
         border-radius: 10px;
@@ -414,7 +415,7 @@ body{
 }
 
 footer{
-        background:linear-gradient(to bottom, var(--background) 1%, var(--heading) 99%);
+        background:linear-gradient(to bottom, var(--background), var(--heading), var(--heading));
         padding: 20px 15px;
         margin:0;
 }
@@ -426,7 +427,7 @@ footer{
 }
 
 .mission-statement h2{
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         font-family: var(--head-font);
         font-weight: 700;
         color:var(--body-text);
@@ -440,7 +441,7 @@ footer{
 
 .mission-statement p{
         font-family: var(--text-font);
-        font-size: 1.05rem;
+        font-size: 1rem;
         color:var(--text);
         text-indent: 5px;
         text-align: center;
@@ -481,4 +482,22 @@ footer{
         border-radius: 50%;
         border: none;
         object-fit: fill;
+}
+
+.overlay{
+        height: 100vh;
+        width: 100vw;
+        background-color: var(--overlay);
+        opacity: 0.3;
+        display: block;
+        position: fixed;
+        top: 50px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+}
+
+.panel{
+        display: none;
+        transition: ease-in-out 0.3s;
 }

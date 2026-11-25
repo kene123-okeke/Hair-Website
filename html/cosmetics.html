@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            (function () {
+                try {
+                    const saved = localStorage.getItem('theme');
+                     const dark  = saved === 'dark' ||
+                      (!saved && matchMedia('(prefers-color-scheme: dark)').matches);
+                    if (dark) document.documentElement.setAttribute('data-theme', 'dark');
+                    } catch (e) {}
+                })();
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kin & Tee's Multi concept</title>
+        <link rel="stylesheet" href="../css/category.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <button type="button" onclick="menuToggle()" class="menu" id="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <h2><span>Kin & Tee's</span> Multi concept</h2>
+            <div class="nav-links" id="navlinks">
+                <a href="index.html">Home</a>
+                <a href="hair.html">Hair</a>
+                <a href="cosmetics.html">Cosmetics</a>
+                <a href="accessories.html">Accessories</a>
+                <a href="articles.html">Articles</a>
+                <a href="#">Wishlist</a>
+                <input type="text" placeholder="Search...">
+                <button id="theme-toggle" aria-label="Toggle dark mode">&#9728;</button>
+    
+            </div>
+            <a href="#" class="cart">Cart</a>
+        </div>
+            
+        <div class="container">
+                <div class="header-links"><a href="index.html">Home</a> / <a href="cosmetics.html">Cosmetics</a>
+                </div>
+                
+                <h3 class="page-title">Cosmetics</h3>
+                
+                <div class="categories">
+                    <button type="button" class="types active">All</button>
+                    <button type="button" class="types">Foundations</button>
+                    <button type="button" class="types">Powder</button>
+                    <button type="button" class="types">Lip Stick</button>
+                    <button type="button" class="types">Polish </button>
+                </div>
+                
+                <div class="filter">
+                    <button type="button" onclick="filterOpenToggle()"><i>  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="4" y1="6" x2="20" y2="6"></line>
+      <line x1="7" y1="12" x2="17" y2="12"></line>
+      <line x1="10" y1="18" x2="14" y2="18"></line>
+  </svg>
+</i> Filter</button>
+                    
+                    <div class="filter-keys openfilter" id="filter-Keys">
+                        <div class="keys">
+                        <button type="button">X-pression</button>
+                        <button type="button">Lush</button>
+                        <button type="button">Darling</button>
+                        <button type="button">Aviv</button>
+                        <button type="button">Attachment</button>
+                        </div>
+                        
+                        <div class="applyBtn">
+                            <button type="button" class="apply" onclick="filterOpenToggle()">&#10003; Apply</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-items">  
+                    <div class="items">
+                        <span class="images"></span>
+                        <span class="details">
+                            <h4>Hair Attachments</h4>
+                            <strong>Brand</strong>
+                        </span>
+                    </div>
+                    
+                     <div class="items">
+                        <span class="images"></span>
+                        <span class="details">
+                        <h4>Hair Attachments</h4>
+                        <strong>Brand</strong>
+                        </span>
+                    </div>
+  
+                    <div class="items">
+                        <span class="images"></span>
+                        <span class="details">
+                        <h4>Hair Attachments</h4>
+                        <strong>Brand</strong>
+                        </span>
+                    </div>
+  
+                    <div class="items">
+                        <span class="images"></span>
+                        <span class="details">
+                            <h4>Hair Attachments</h4>
+                            <strong>Brand</strong>
+                        </span>
+                    </div>
+                </div>
+        </div>
+            
+       <div class="detail-card" id="detailcard">
+            <button type="button" onclick="closePanel()" class="close" >&#10005;</button>
+            <div class="detail-img">
+                <img src="../images/hair.avif"></div>
+            <div class="detail-write-up"><h4>heading</h4>
+            <p>.overlay{
+        height: 100vh;
+        width: 100vw;
+        background-color: var(--overlay);
+        opacity: 0.3;
+        display: block;
+        position: fixed;
+        top: 50px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+}
+
+.panel{
+        display: none;
+        transition: ease-in-out 0.3s;
+}</p></div>
+            <div class="detail-color"><span>colors</span>
+                <div class="colors">
+                    <button class="swatch-btn">
+                    <span class="color-box" aria-hidden="true" style="background:black"></span>
+                    <span>black</span>
+                    </button>
+                    <button class="swatch-btn">
+                    <span class="color-box" aria-hidden="true" style="background:red" ></span>
+                    <span>red</span>
+                    </button>
+                    <button class="swatch-btn">
+                    <span class="color-box" aria-hidden="true" style="background:brown"></span>
+                    <span>brown</span>
+                    </button>
+                </div>
+            </div>
+            <div class="price-section">
+                <h4>Price:</h4>
+                <span id="priceTotal">N4500</span>
+            </div>
+            <div class="cart-section">
+                <div class="amount">
+                    <button type="button" class="amountbtn" id="decrease" onclick="changeQuantity(-1)">-</button>
+                    <input type="number" value="1" min="1" id="quantity">
+                    <button type="button" class="amountbtn" id="increase" onclick="changeQuantity(1)">+</button>
+                </div>
+            <button type="button" class="cartbtn">Add</button></div>
+        </div> 
+            
+        <div class="overlay panel" id="overlay" onclick="menuToggle()"></div>
+        
+        
+        <script src="../js/index.js"></script>
+        <script src="../js/category.js"></script>
+    </body>
+
+</html>
+
+
