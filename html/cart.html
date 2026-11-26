@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function () {
+            try {
+                const saved = localStorage.getItem('theme');
+                 const dark  = saved === 'dark' ||
+                  (!saved && matchMedia('(prefers-color-scheme: dark)').matches);
+                if (dark) document.documentElement.setAttribute('data-theme', 'dark');
+                } catch (e) {}
+            })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kin & Tee's Multi concept</title>
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+    <div class="navbar">
+        <button type="button" onclick="menuToggle()" class="menu" id="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <h2><span>Kin & Tee's</span> Multi concept</h2>
+        <div class="nav-links" id="navlinks">
+            <a href="index.html">Home</a>
+            <a href="hair.html">Hair</a>
+            <a href="cosmetics.html">Cosmetics</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="articles.html">Articles</a>
+            <a href="#">Wishlist</a>
+            <input type="text" placeholder="Search...">
+            <button id="theme-toggle" aria-label="Toggle dark mode">&#9728;</button>
+
+        </div>
+        <a href="cart.html" class="cart">Cart</a>
+
+        
+    </div>
+    
+    <div>
+        <span class="links">
+            <a href="index.html">Home</a>/<a href="cart.html">Cart</a>
+        </span>
+        
+        <h2 class="page-title">Your Cart <span id="cartNumber">0</span></h2>
+        
+        <div class="delivery-note"><p>free delivery note</p></div>
+        
+        <div class="cart-addition">
+            <div class="cart-items">
+                <span><img src=""></span>
+                <span>
+                    <h4 class="product-name">Product Name</h4>
+                    <p class="product-options"> Shade</p>
+                    
+                    <button type="button" class="removebtn">Remove</button>
+                </span>
+                
+                <span class="price">price</span>
+            </div>
+        </div>
+        
+        <span class="back-to-shop"><a href="#">continue shopping</a></span>
+        
+        <div class="ads">
+            <h3>You may also Like </h3>
+            
+            <div class="container-items">  
+                <div class="items">
+                    <span class="images"></span>
+                    <span class="details">
+                        <h4>Hair Attachments</h4>
+                        <strong>Brand       </strong>
+                    </span>
+                </div>
+                    
+                <div class="items">
+                    <span class="images"></span>
+                    <span class="details">
+                        <h4>Hair Attachments</h4>
+                        <strong>Brand</strong>
+                    </span>
+                </div>
+  
+                <div class="items">
+                    <span class="images"></span>
+                    <span class="details">
+                        <h4>Hair Attachments</h4>
+                        <strong>Brand</strong>
+                    </span>
+                </div>
+  
+                <div class="items">
+                    <span class="images"></span>
+                    <span class="details">
+                        <h4>Hair Attachments</h4>
+                        <strong>Brand</strong>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <span>
+                <h4>
+                    subtotal 
+                </h4>
+                <p>0</p>
+            </span>
+            <span>
+                <h4>
+                    total 
+                </h4>
+                <p>
+                    0
+                </p>
+            </span>
+            
+            <span>
+                <button type="button">
+                    checkout
+                </button>
+            </span>
+        </div>
+    </div>
+    
+        <div class="overlay panel" id="overlay" onclick="menuToggle()"></div>
+        
+        
+        <script src="../js/index.js"></script>
+        <script src="../js/category.js"></script>
+    </body>
+        
+</html>
