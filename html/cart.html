@@ -41,30 +41,34 @@
         
     </div>
     
-    <div>
+    <div class="container">
         <span class="links">
             <a href="index.html">Home</a>/<a href="cart.html">Cart</a>
         </span>
         
-        <h2 class="page-title">Your Cart <span id="cartNumber">0</span></h2>
+        <h2 class="title">Your cart <span id="cartNumber">(0)</span>
+        </h2>
         
-        <div class="delivery-note"><p>free delivery note</p></div>
+        <div class="delivery-note"><p>[free delivery note]</p></div>
         
         <div class="cart-addition">
             <div class="cart-items">
-                <span><img src=""></span>
-                <span>
+                <div class="starter">
+                    <span class="cart-img"><img src=""></span>
+                    <span class="cart-details">
                     <h4 class="product-name">Product Name</h4>
                     <p class="product-options"> Shade</p>
                     
                     <button type="button" class="removebtn">Remove</button>
-                </span>
+                    </span>
+                </div>
                 
                 <span class="price">price</span>
             </div>
         </div>
         
-        <span class="back-to-shop"><a href="#">continue shopping</a></span>
+        <div class="back-to-shop"><a href="#">continue shopping</a>
+        </div>
         
         <div class="ads">
             <h3>You may also Like </h3>
@@ -104,28 +108,22 @@
             </div>
         </div>
         
-        <div>
-            <span>
-                <h4>
-                    subtotal 
-                </h4>
-                <p>0</p>
-            </span>
-            <span>
-                <h4>
-                    total 
-                </h4>
-                <p>
-                    0
-                </p>
-            </span>
-            
-            <span>
-                <button type="button">
-                    checkout
-                </button>
-            </span>
-        </div>
+       
+    </div>
+    <div class="bottom-checkout">
+        <span>
+            <h4>subtotal</h4>
+            <p>0</p>
+        </span>
+        <span>
+            <h4>total</h4>
+            <p>0</p>
+        </span>
+        <span>
+            <button type="button">
+            checkout
+            </button>
+        </span>
     </div>
     
         <div class="overlay panel" id="overlay" onclick="menuToggle()"></div>
